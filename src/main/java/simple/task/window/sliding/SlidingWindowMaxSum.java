@@ -24,9 +24,8 @@ public class SlidingWindowMaxSum {
 
             sum = sum - firstElementInSum + newElement;
 
-            if (sum > maxSum) {
-                maxSum = sum;
-            }
+            maxSum = Math.max(sum, maxSum);
+
         }
 
         return maxSum;
